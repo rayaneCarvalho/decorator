@@ -5,7 +5,6 @@ public class Original implements Filtro{
     public float valorSaturacao;
 
     public Original(){
-
     }
 
     public Original(float valorSaturacao){
@@ -17,7 +16,7 @@ public class Original implements Filtro{
     }
 
     @Override
-    public String getListaFiltro() {
+    public String getListaFiltros() {
         return "Original";
     }
 }

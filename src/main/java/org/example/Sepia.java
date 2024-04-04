@@ -7,11 +7,11 @@ public class Sepia extends FiltroDecorator{
 
     @Override
     public float getTaxaSaturacao() {
-        return 0.20f;
+        return 0.15f;
     }
 
     @Override
     public String getNomeFiltro() {
-        return "Preto e Branco";
+        return "Sepia";
     }
 }

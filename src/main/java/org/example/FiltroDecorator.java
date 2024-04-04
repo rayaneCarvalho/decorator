@@ -22,8 +22,8 @@ public abstract class FiltroDecorator implements Filtro {
 
     public abstract String getNomeFiltro();
 
-    public String getListaFiltro(){
-        return this.filtro.getListaFiltro() + ", " + this.getNomeFiltro();
+    public String getListaFiltros(){
+        return this.filtro.getListaFiltros() + ", " + this.getNomeFiltro();
     }
 
     public void setNomeFiltro(){

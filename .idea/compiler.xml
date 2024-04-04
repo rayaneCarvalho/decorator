@@ -9,5 +9,8 @@
         <module name="Notificacao" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="decorator" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>

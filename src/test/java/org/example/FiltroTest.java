@@ -6,87 +6,87 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FiltroTest {
     @Test
-    void deveRetornarValorTotalAssinatura() {
-        Filtro streaming = new PrimeVideo(19.90f);
+    void deveRetornarTaxaTotalSaturacao() {
+        Filtro filtro = new Original(0.02f);
 
-        assertEquals(19.90f, streaming.getValorTotalAssinatura());
+        assertEquals(0.02f, filtro.getTaxaTotalSaturacao());
     }
 
     @Test
-    void deveRetornarListaAssinaturas() {
-        Filtro streaming = new PrimeVideo(19.90f);
+    void deveRetornarListaFiltros() {
+        Filtro filtro = new Original(0.02f);
 
-        assertEquals("Prime Video", streaming.getListaFiltro());
+        assertEquals("Original", filtro.getListaFiltros());
     }
 
     @Test
-    void deveRetornarValorTotalAssinaturaComParamount() {
-        Filtro streaming = new Paramount (new PrimeVideo(19.90f));
+    void deveRetornarTaxaTotalSaturacaoComPretoBranco() {
+        Filtro filtro = new PretoBranco (new Original(0.02f));
 
-        assertEquals(34.80f, streaming.getValorTotalAssinatura());
+        assertEquals(0.07f, filtro.getTaxaTotalSaturacao());
     }
 
     @Test
-    void deveRetornarListaAssinaturasComParamount() {
-        Filtro streaming = new Paramount (new PrimeVideo(19.90f));
+    void deveRetornarListaFiltrosComPretoBranco() {
+        Filtro filtro = new PretoBranco (new Original(0.02f));
 
-        assertEquals("Prime Video, Paramount+", streaming.getListaFiltro());
+        assertEquals("Original, Preto e Branco", filtro.getListaFiltros());
     }
 
     @Test
-    void deveRetornarValorTotalAssinaturaComTeleCine() {
-        Filtro streaming = new TeleCine (new PrimeVideo(19.90f));
+    void deveRetornarTaxaTotalSaturacaoComSepia() {
+        Filtro filtro = new Sepia (new Original(0.02f));
 
-        assertEquals(49.80f, streaming.getValorTotalAssinatura());
+        assertEquals(0.17f, filtro.getTaxaTotalSaturacao());
     }
 
     @Test
-    void deveRetornarListaAssinaturasComTeleCine() {
-        Filtro streaming = new TeleCine (new PrimeVideo(19.90f));
+    void deveRetornarListaFiltrosComSepia() {
+        Filtro filtro = new Sepia (new Original(0.02f));
 
-        assertEquals("Prime Video, Telecine", streaming.getListaFiltro());
+        assertEquals("Original, Sepia", filtro.getListaFiltros());
     }
 
     @Test
-    void deveRetornarValorTotalAssinaturaComPremiere() {
-        Filtro streaming = new Premiere (new PrimeVideo(19.90f));
+    void deveRetornarTaxaTotalSaturacaoComVintage() {
+        Filtro filtro = new Vintage (new Original(0.02f));
 
-        assertEquals(79.80f, streaming.getValorTotalAssinatura());
+        assertEquals(0.09f, filtro.getTaxaTotalSaturacao());
     }
 
     @Test
-    void deveRetornarListaAssinaturasComPremiere() {
-        Filtro streaming = new Premiere (new PrimeVideo(19.90f));
+    void deveRetornarListaFiltrosComVintage() {
+        Filtro filtro = new Vintage (new Original(0.02f));
 
-        assertEquals("Prime Video, PREMIERE", streaming.getListaFiltro());
+        assertEquals("Original, Vintage", filtro.getListaFiltros());
     }
 
     @Test
-    void deveRetornarValorTotalAssinaturaComParamountMaisTeleCine() {
-        Filtro streaming = new TeleCine (new Paramount (new PrimeVideo(19.90f)));
+    void deveRetornarTaxaTotalSaturacaoComPretoBrancoMaisSepia() {
+        Filtro filtro = new Sepia (new PretoBranco (new Original(0.02f)));
 
-        assertEquals(64.70f, streaming.getValorTotalAssinatura());
+        assertEquals(0.22f, filtro.getTaxaTotalSaturacao());
     }
 
     @Test
-    void deveRetornarListaAssinaturasComParamountMaisTeleCine() {
-        Filtro streaming = new TeleCine (new Paramount (new PrimeVideo(19.90f)));
+    void deveRetornarListaFiltrosComPretoBrancoMaisSepia() {
+        Filtro filtro = new Sepia (new PretoBranco (new Original(0.02f)));
 
-        assertEquals("Prime Video, Paramount+, Telecine", streaming.getListaFiltro());
+        assertEquals("Original, Preto e Branco, Sepia", filtro.getListaFiltros());
     }
 
     @Test
-    void deveRetornarValorTotalAssinaturaComParamountMaisTeleCineMaisPremiere() {
-        Filtro streaming = new Premiere(new TeleCine (new Paramount (new PrimeVideo(19.90f))));
+    void deveRetornarTaxaTotalSaturacaoComPretoBrancoMaisSepiaMaisVintage() {
+        Filtro filtro = new Vintage(new Sepia (new PretoBranco (new Original(0.02f))));
 
-        assertEquals(124.60f, streaming.getValorTotalAssinatura());
+        assertEquals(0.3f, filtro.getTaxaTotalSaturacao());
     }
 
     @Test
-    void deveRetornarListaAssinaturasComParamountMaisTeleCineMaisPremiere() {
-        Filtro streaming = new Premiere(new TeleCine (new Paramount (new PrimeVideo(19.90f))));
+    void deveRetornarListaFiltrosComPretoBrancoMaisSepiaMaisVintage() {
+        Filtro filtro = new Vintage(new Sepia (new PretoBranco (new Original(0.02f))));
 
-        assertEquals("Prime Video, Paramount+, Telecine, PREMIERE", streaming.getListaFiltro());
+        assertEquals("Original, Preto e Branco, Sepia, Vintage", filtro.getListaFiltros());
     }
 
 }

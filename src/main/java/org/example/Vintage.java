@@ -7,11 +7,11 @@ public class Vintage extends FiltroDecorator{
 
     @Override
     public float getTaxaSaturacao() {
-        return 0.20f;
+        return 0.08f;
     }
 
     @Override
     public String getNomeFiltro() {
-        return "Preto e Branco";
+        return "Vintage";
     }
 }

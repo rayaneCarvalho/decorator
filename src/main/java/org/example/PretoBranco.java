@@ -7,7 +7,7 @@ public class PretoBranco extends FiltroDecorator{
 
     @Override
     public float getTaxaSaturacao() {
-        return 0.20f;
+        return 0.05f;
     }
 
     @Override
