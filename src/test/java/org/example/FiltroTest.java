@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.abstracao.Original;
+import org.example.implementacao.Filtro;
+import org.example.implementacao.PretoBranco;
+import org.example.implementacao.Sepia;
+import org.example.implementacao.Vintage;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,7 +26,7 @@ class FiltroTest {
 
     @Test
     void deveRetornarTaxaTotalSaturacaoComPretoBranco() {
-        Filtro filtro = new PretoBranco (new Original(0.02f));
+        Filtro filtro = new PretoBranco(new Original(0.02f));
 
         assertEquals(0.07f, filtro.getTaxaTotalSaturacao());
     }
@@ -35,7 +40,7 @@ class FiltroTest {
 
     @Test
     void deveRetornarTaxaTotalSaturacaoComSepia() {
-        Filtro filtro = new Sepia (new Original(0.02f));
+        Filtro filtro = new Sepia(new Original(0.02f));
 
         assertEquals(0.17f, filtro.getTaxaTotalSaturacao());
     }
@@ -49,7 +54,7 @@ class FiltroTest {
 
     @Test
     void deveRetornarTaxaTotalSaturacaoComVintage() {
-        Filtro filtro = new Vintage (new Original(0.02f));
+        Filtro filtro = new Vintage(new Original(0.02f));
 
         assertEquals(0.09f, filtro.getTaxaTotalSaturacao());
     }

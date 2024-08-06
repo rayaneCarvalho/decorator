@@ -1,6 +1,9 @@
-package org.example;
+package org.example.implementacao;
 
-public class Vintage extends FiltroDecorator{
+import org.example.abstracao.FiltroDecorator;
+import org.example.implementacao.Filtro;
+
+public class Vintage extends FiltroDecorator {
     public Vintage(Filtro filtro) {
         super(filtro);
     }

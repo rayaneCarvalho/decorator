@@ -1,6 +1,9 @@
-package org.example;
+package org.example.implementacao;
 
-public class PretoBranco extends FiltroDecorator{
+import org.example.abstracao.FiltroDecorator;
+import org.example.implementacao.Filtro;
+
+public class PretoBranco extends FiltroDecorator {
     public PretoBranco(Filtro filtro) {
         super(filtro);
     }

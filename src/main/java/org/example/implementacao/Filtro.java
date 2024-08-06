@@ -1,4 +1,4 @@
-package org.example;
+package org.example.implementacao;
 
 public interface Filtro {
     float getTaxaTotalSaturacao();

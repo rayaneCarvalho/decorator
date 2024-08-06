@@ -1,6 +1,9 @@
-package org.example;
+package org.example.implementacao;
 
-public class Sepia extends FiltroDecorator{
+import org.example.abstracao.FiltroDecorator;
+import org.example.implementacao.Filtro;
+
+public class Sepia extends FiltroDecorator {
     public Sepia(Filtro filtro) {
         super(filtro);
     }

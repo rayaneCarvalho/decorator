@@ -1,4 +1,6 @@
-package org.example;
+package org.example.abstracao;
+
+import org.example.implementacao.Filtro;
 
 public abstract class FiltroDecorator implements Filtro {
 

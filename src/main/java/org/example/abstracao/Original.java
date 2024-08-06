@@ -1,6 +1,8 @@
-package org.example;
+package org.example.abstracao;
 
-public class Original implements Filtro{
+import org.example.implementacao.Filtro;
+
+public class Original implements Filtro {
 
     public float valorSaturacao;
 
