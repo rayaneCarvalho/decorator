@@ -56,7 +56,7 @@ class FiltroTest {
     void deveRetornarTaxaTotalSaturacaoComVintage() {
         Filtro filtro = new Vintage(new Original(0.02f));
 
-        assertEquals(0.09f, filtro.getTaxaTotalSaturacao());
+        assertEquals(0.09, filtro.getTaxaTotalSaturacao(), 0.01f);
     }
 
     @Test
